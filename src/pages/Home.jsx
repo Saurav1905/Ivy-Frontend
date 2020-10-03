@@ -16,7 +16,7 @@ function Home() {
           <Route path="/Roadmaps/:id" component={Roadmap} />
           <Route exact path="/Roadmaps" component={Roadmaps} />
           <Route path="/not-found" component={NotFound} />
-          <Route exact path="/" component={Browse} />
+          <Route exact path="/home" component={Browse} />
           <Redirect to="/not-found" />
         </Switch>
       </div>
