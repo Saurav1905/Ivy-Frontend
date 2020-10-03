@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import CheckIcon from "@material-ui/icons/Check";
+import { Avatar } from "@material-ui/core";
+import { ReactComponent as ManLogo } from "../ToyFace.svg";
 function Landing() {
   return (
     <>
@@ -27,6 +29,21 @@ function Landing() {
             <Link to="/home" className="Landing__start">
               Get Started
             </Link>
+            <div
+              style={{ marginTop: 15, display: "flex", position: "relative" }}
+            >
+              <Avatar style={{}} src="https://picsum.photos/200?random=1" />
+              <Avatar style={{}} src="https://picsum.photos/200?random=2" />
+              <Avatar style={{}} src="https://picsum.photos/200?random=3" />
+            </div>
+            <span
+              style={{
+                color: "#4F596A",
+                fontWeight: "normal",
+              }}
+            >
+              Join over <span style={{ color: "purple" }}>4000+</span> students
+            </span>
           </div>
           <div className="Landing__box">
             <span className="Landing__decor">
@@ -43,6 +60,43 @@ function Landing() {
             </span>
           </div>
         </div>
+      </div>
+      <div className="Landing__counter">
+        <span className="Landing__count">
+          <h1>939</h1>
+          <p>Track</p>
+        </span>
+        <span className="Landing__count">
+          <h1>939</h1>
+          <p>Track</p>
+        </span>
+        <span className="Landing__count Landing__countthird">
+          <h1>939</h1>
+          <p>Track</p>
+        </span>
+        <span className="Landing__patch"></span>
+      </div>
+      <div className="Landing__features">
+        <h1>Feature Skilltracks</h1>
+        <p>
+          Below are some of our most popular tracks. Each track is curated by an
+          expert and includes resources they used to gain mastery over their
+          skills.
+        </p>
+        <span className="Landing__patchright"></span>
+      </div>
+      <div className="Landing__create">
+        <span className="Landing__createtext">
+          <h1>Create your own skilltracks.</h1>
+          <p>
+            Blaze your own trail and curate the best resources to learn a skill
+            you’ve mastered. Your personal tracks allow you to maintain a record
+            of what you’re learning.
+          </p>
+        </span>
+        <span className="Landing__Man">
+          <ManLogo className="Landing__Manlogo" />
+        </span>
       </div>
     </>
   );
