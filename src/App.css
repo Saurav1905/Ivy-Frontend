@@ -183,8 +183,8 @@ body {
 }
 
 .Landing__patch {
-    height: 11.894882434301522vh;
-    width: 5.748663101604278vw;
+    height: 86px;
+    width: 86px;
     background: linear-gradient(35.71deg, #FFD7A9 9.11%, #FFAE70 71.64%);
     border-radius: 1000px;
     position: absolute;
