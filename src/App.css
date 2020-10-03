@@ -264,9 +264,69 @@ body {
     justify-content: center;
     width: 100%;
     object-fit: contain;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-image: url("./ToyFaces.png");
 }
 
-.Landing__Manlogo {
-    width: fit-content;
-    object-fit: contain;
+
+
+.Landing__howitworks {
+    background: #FFB980;
+    min-height: auto;
+    padding: 9.95850622406639vh 10.294117647058824vw;
+    color: white;
+}
+
+.Landing__howitworks>h1 {
+
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 56px;
+    color: #FFFFFF;
+}
+
+.Landing__bullet {
+    position: relative;
+    margin-top: 3em;
+    margin-left: 3em;
+}
+
+.Landing__bulletcircle {
+    position: absolute;
+    border-radius: 1000px;
+    background: linear-gradient(35.71deg, #FFD7A9 9.11%, #FFFFFF 71.64%);
+    height: 50px;
+    width: 50px;
+    left: -50px
+}
+
+.Landing__bullet>h1 {
+    padding-left: 3em;
+    font-family: "Poppins"sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30;
+    line-height: 36px;
+    color: #FFFFFF;
+}
+
+.Landing__bottom {
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.Landing__bottom h1 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+    color: #001A49;
 }

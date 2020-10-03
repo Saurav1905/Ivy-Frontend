@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import CheckIcon from "@material-ui/icons/Check";
 import { Avatar } from "@material-ui/core";
-import { ReactComponent as ManLogo } from "../ToyFace.svg";
 function Landing() {
   return (
     <>
@@ -11,7 +10,7 @@ function Landing() {
           {" "}
           Skill<span className="Landing__track">Track</span>
         </span>
-        <Link to="/signin" className="Landing__signin">
+        <Link to="/user" className="Landing__signin">
           Sign in
         </Link>
         <Link to="/home" className="Landing__start">
@@ -94,9 +93,46 @@ function Landing() {
             of what you’re learning.
           </p>
         </span>
-        <span className="Landing__Man">
-          <ManLogo className="Landing__Manlogo" />
-        </span>
+        <span className="Landing__Man"></span>
+      </div>
+      <div className="Landing__howitworks">
+        <h1>How it works</h1>
+        <div className="Landing__bullets">
+          <div className="Landing__bullet">
+            <span className="Landing__bulletcircle"></span>
+            <h1>
+              Create tracks for any skill by collecting the best available
+              resources on the Internet for learning it.
+            </h1>
+          </div>
+          <div
+            style={{
+              marginTop: 60,
+            }}
+            className="Landing__bullet"
+          >
+            <span className="Landing__bulletcircle"></span>
+            <h1>Create brand new tracks by forking existing ones.</h1>
+          </div>
+          <div
+            style={{
+              marginTop: 80,
+            }}
+            className="Landing__bullet"
+          >
+            <span className="Landing__bulletcircle"></span>
+            <h1>
+              Maintain a record of everything you’re learning and where to find
+              it.
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div className="Landing__bottom">
+        <h1>What’re you waiting for?</h1>
+        <Link to="/home" className="Landing__start">
+          Get Started
+        </Link>
       </div>
     </>
   );
