@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.scss";
 import SwiperCard from "./SwiperCard";
+import AuthContext from "../contexts/auth/AuthContext";
+
 function Swipper(props) {
-  const [swiper, useSwiper] = useState([
+  const { user } = useContext(AuthContext);
+  const [swiper, setSwiper] = useState([
     {
       taskid: 1,
       taskTitle: "Design Fundamentals",
@@ -24,6 +27,28 @@ function Swipper(props) {
       ExtraReading: "The Design of Everyday Things by Don Norman",
     },
   ]);
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const res = await fetch(
+          `https://skilltracks.herokuapp.com/track/${props.id}`,
+          {
+            method: "GET",
+            headers: {
+              Authorization: `Bearer ${user.authToken}`,
+            },
+          }
+        );
+        const data = await res.json();
+        console.log(data);
+        if (data.error) throw Error(data);
+      } catch (error) {
+        console.log(error);
+      }
+      // setSwiper(data)
+    }
+    fetchData();
+  }, [props.id, user.authToken]);
   return (
     <div className="Task__task">
       <Swiper className="Swiper" spaceBetween={50} slidesPerView={3}>
