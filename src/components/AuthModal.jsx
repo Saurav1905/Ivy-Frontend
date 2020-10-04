@@ -15,24 +15,37 @@ const AuthModal = () => {
   const [password, setPassword] = useState("");
   const history = useHistory();
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log("Logging In");
+    const body = {
+      email,
+      password,
+    };
+    console.log(body);
     try {
-      const res = await fetch("/user/login", {
+      const res = await fetch("https://skilltracks.herokuapp.com/user/login", {
         method: "POST",
-        body: JSON.stringify({
-          email,
-          password,
-        }),
+        body: JSON.stringify(body),
+        headers: {
+          "Content-Type": "application/json",
+        },
       });
       const data = await res.json();
       // authToken comes seperately from the API, but the context needs it inside the user
-      data.user.authToken = data.authToken;
-      login(user);
-      history.push("/track/browse");
+      if (!data.error) {
+        data.user.authToken = data.authToken;
+        console.log(data);
+        login(data.user);
+        console.log(user);
+        history.push("/track/browse");
+      } else {
+        throw Error(data.message);
+      }
     } catch (error) {
       console.log(error);
       logout();
-      history.push("/");
+      // history.push("/");
     }
   };
 
