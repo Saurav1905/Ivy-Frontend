@@ -17,7 +17,7 @@ function Roadmap(props) {
             <p>{props.usertitle}</p>
           </div>
         </div>
-        <Link to={`/track/mytrack/${props.id}`} className="Roadmap__start">
+        <Link to={`/track/browse/${props.id}`} className="Roadmap__start">
           Start
         </Link>
       </div>

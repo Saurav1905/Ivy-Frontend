@@ -5,7 +5,6 @@ import Browse from "../components/Browse";
 import Mytracks from "../components/Mytracks";
 import NotFound from "./NotFound";
 import Help from "../components/Help";
-import UserRoadmap from "./UserRoadmap";
 import AllRoadmap from "./AllRoadmap";
 import CreateTrack from "./CreateTrack";
 import ShowTask from "./ShowTask";
@@ -22,7 +21,6 @@ function Home() {
             path="/track/mytrack/create/:id"
             component={CreateTrack}
           />
-          <Route path="/track/mytrack/:id" component={UserRoadmap} />
           <Route path="/track/browse/:id" component={AllRoadmap} />
           <Route path="/track/mytracks/help" component={Help} />
           <Route path="/track/mytracks/" component={Mytracks} />
