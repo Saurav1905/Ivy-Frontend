@@ -5,11 +5,11 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import FormControl from "@material-ui/core/FormControl";
 import FormLabel from "@material-ui/core/FormLabel";
 
-export default function RadioButtonsGroup() {
-  const [value, setValue] = React.useState("Frontend");
+export default function RadioButtonsGroup(props) {
+  // const [value, setValue] = React.useState(props.value);
 
   const handleChange = (event) => {
-    setValue(event.target.value);
+    props.setValue(event.target.value);
   };
 
   return (
@@ -18,7 +18,7 @@ export default function RadioButtonsGroup() {
       <RadioGroup
         aria-label="Category"
         name="Category"
-        value={value}
+        value={props.value}
         onChange={handleChange}
       >
         <FormControlLabel
@@ -30,6 +30,11 @@ export default function RadioButtonsGroup() {
           value="Frontend"
           control={<Radio />}
           label="Frontend"
+        />
+        <FormControlLabel
+          value="General"
+          control={<Radio />}
+          label="General"
         />
         <FormControlLabel value="Backend" control={<Radio />} label="Backend" />
       </RadioGroup>
