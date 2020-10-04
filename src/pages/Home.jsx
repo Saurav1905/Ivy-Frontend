@@ -15,7 +15,7 @@ function Home() {
       <NavBar />
       <div className="Home__content">
         <Switch>
-          <Route exact path="/track/mytrack/show/:id" component={ShowTask} />
+          <Route exact path="/track/browse/show/:id" component={ShowTask} />
           <Route
             exact
             path="/track/mytrack/create/:id"

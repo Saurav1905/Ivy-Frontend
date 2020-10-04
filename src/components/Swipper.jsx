@@ -6,6 +6,7 @@ import SwiperCard from "./SwiperCard";
 function Swipper(props) {
   const [swiper, useSwiper] = useState([
     {
+      // single step
       taskid: 1,
       taskTitle: "Design Fundamentals",
       taskDescription:
@@ -30,6 +31,7 @@ function Swipper(props) {
         {swiper.map((object) => (
           <SwiperSlide
             style={{
+              position: "relative",
               justifyContent: "space-between",
               padding: 20,
             }}
@@ -38,6 +40,7 @@ function Swipper(props) {
             <SwiperCard
               taskTitle={object.taskTitle}
               isCompleted={object.isCompleted}
+              id={object.taskid}
             />
           </SwiperSlide>
         ))}

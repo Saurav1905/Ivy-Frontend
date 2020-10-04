@@ -1,5 +1,6 @@
 import React from "react";
 import CheckCircleIcon from "@material-ui/icons/CheckCircle";
+import { Link } from "react-router-dom";
 function renderBottom(props) {
   if (props.isCompleted) {
     return (
@@ -33,6 +34,19 @@ function SwiperCard(props) {
       >
         {renderBottom(props)}
       </div>
+      <span style={{ position: "absolute", bottom: "45%" }}>
+        <Link
+          to={`/track/browse/show/${props.id}`}
+          style={{
+            fontSize: 30,
+            cursor: "pointer",
+            textDecoration: "none",
+            color: "black",
+          }}
+        >
+          +
+        </Link>
+      </span>
     </>
   );
 }
