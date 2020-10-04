@@ -1,10 +1,13 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import CheckIcon from "@material-ui/icons/Check";
 import { Avatar } from "@material-ui/core";
 import AuthContext from "../contexts/auth/AuthContext";
+import GlobalRoadmap from "../components/GlobalRoadmap";
 function Landing() {
-  const {setLoginModalOpen, user, setRegisterModalOpen} = useContext(AuthContext)
+  const { setLoginModalOpen, user, setRegisterModalOpen } = useContext(
+    AuthContext
+  );
   return (
     <>
       <div className="Landing__nav">
@@ -12,21 +15,24 @@ function Landing() {
           {" "}
           Skill<span className="Landing__track">Track</span>
         </span>
-        <Link onClick={() => setLoginModalOpen(true)} className="Landing__signin">
+        <Link
+          onClick={() => setLoginModalOpen(true)}
+          className="Landing__signin"
+        >
           Sign in
         </Link>
         {user ? (
-            <Link to="/track/browse" className="Landing__start">
-              Get Started
-            </Link>
-          ) :
-          (
-            <Link onClick={() => setRegisterModalOpen(true)} className="Landing__start">
-              Get Started
-            </Link>
-          )
-        }
-        
+          <Link to="/track/browse" className="Landing__start">
+            Get Started
+          </Link>
+        ) : (
+          <Link
+            onClick={() => setRegisterModalOpen(true)}
+            className="Landing__start"
+          >
+            Get Started
+          </Link>
+        )}
       </div>
       <div className="Landing__main">
         <div className="Landing__background">
@@ -37,16 +43,17 @@ function Landing() {
               experts.
             </h6>
             {user ? (
-                <Link to="/track/browse" className="Landing__start">
-                  Get Started
-                </Link>
-              ) :
-              (
-                <Link onClick={() => setRegisterModalOpen(true)} className="Landing__start">
-                  Get Started
-                </Link>
-              )
-            }
+              <Link to="/track/browse" className="Landing__start">
+                Get Started
+              </Link>
+            ) : (
+              <Link
+                onClick={() => setRegisterModalOpen(true)}
+                className="Landing__start"
+              >
+                Get Started
+              </Link>
+            )}
             <div
               style={{ marginTop: 15, display: "flex", position: "relative" }}
             >
@@ -102,6 +109,31 @@ function Landing() {
           skills.
         </p>
         <span className="Landing__patchright"></span>
+      </div>
+      <div
+        className="browse__roadmaps"
+        style={{
+          marginLeft: "10vw",
+        }}
+      >
+        <GlobalRoadmap
+          title="Data Science Track"
+          description="Follow the path Adel took to become a senior UX designer at Facebook."
+          username="Adel Khan"
+          usertitle="UX Designer, Facebook"
+        />
+        <GlobalRoadmap
+          title="Data Science Track"
+          description="Follow the path Adel took to become a senior UX designer at Facebook."
+          username="Adel Khan"
+          usertitle="UX Designer, Facebook"
+        />
+        <GlobalRoadmap
+          title="Data Science Track"
+          description="Follow the path Adel took to become a senior UX designer at Facebook."
+          username="Adel Khan"
+          usertitle="UX Designer, Facebook"
+        />
       </div>
       <div className="Landing__create">
         <span className="Landing__createtext">
