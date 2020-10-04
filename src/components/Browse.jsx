@@ -5,25 +5,28 @@ import { useState, useEffect } from "react";
 import Form from "./Form";
 
 function Browse() {
-  const [global, setGlobal] = useState([]);
-  const [filter, setFilter] = useState("General")
-  useEffect(() => {
-    try {
-      const fetchData = async () => {
-        const res = await fetch('https://skilltracks.herokuapp.com/track', {
-          method: 'GET'
-        })
-        const data = await res.json()
-        if(!data.error) {
-          console.log(data.tracks)
-          setGlobal(data.tracks)
-        }
-      }
-      fetchData()
-    } catch (error) {
-      
-    }
-  }, [])
+  const [global, setGlobal] = useState([
+    {
+      title: "Data Science Track",
+      description:
+        "Follow the path Adel took to become a senior UX designer at Facebook.",
+      id: 1,
+      username: "Adel Khan",
+      category: "General",
+      usertitle: "UX Designer, Facebook",
+    },
+    {
+      title: "UX",
+      description:
+        "Follow the resources Rohini used to land a job as a Data Scientist at Palantir",
+      id: 2,
+      category: "UX Design",
+      username: "Rohini Sharma",
+      usertitle: "Data Scientist, Palantir",
+    },
+  ]);
+  const [filter, setFilter] = useState("General");
+
   return (
     <>
       <div className="browse__top">
@@ -37,19 +40,21 @@ function Browse() {
         }}
       >
         <div className="browse__roadmaps">
-          {global && global.map((object) => 
-          { console.log(object.author)
-            if(object.category === filter)
-            return (
-            <GlobalRoadmap
-              title={object.name}
-              description={object.description}
-              id={object._id}
-              username={object.author.name}
-              usertitle={object.category}
-              key={object._id}
-            />)
-          })}
+          {global &&
+            global.map((object) => {
+              console.log(object.author);
+              if (object.category === filter)
+                return (
+                  <GlobalRoadmap
+                    title={object.title}
+                    description={object.description}
+                    id={object._id}
+                    username={object.username}
+                    usertitle={object.category}
+                    key={object._id}
+                  />
+                );
+            })}
         </div>
         <div
           style={{
@@ -58,7 +63,7 @@ function Browse() {
           }}
           className="browse__selection"
         >
-          <Form value={filter} setValue={setFilter}/>
+          <Form value={filter} setValue={setFilter} />
         </div>
       </div>
     </>
