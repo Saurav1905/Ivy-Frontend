@@ -17,36 +17,36 @@ const AuthModal = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Logging In");
-    const body = {
-      email,
-      password,
-    };
-    console.log(body);
-    try {
-      const res = await fetch("https://skilltracks.herokuapp.com/user/login", {
-        method: "POST",
-        body: JSON.stringify(body),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-      const data = await res.json();
-      // authToken comes seperately from the API, but the context needs it inside the user
-      if (!data.error) {
-        data.user.authToken = data.authToken;
-        console.log(data);
-        login(data.user);
-        console.log(user);
-        history.push("/track/browse");
-      } else {
-        throw Error(data.message);
-      }
-    } catch (error) {
-      console.log(error);
-      logout();
-      // history.push("/");
-    }
+    // console.log("Logging In");
+    // const body = {
+    //   email,
+    //   password,
+    // };
+    // console.log(body);
+    // try {
+    //   const res = await fetch("https://skilltracks.herokuapp.com/user/login", {
+    //     method: "POST",
+    //     body: JSON.stringify(body),
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //   });
+    //   const data = await res.json();
+    //   // authToken comes seperately from the API, but the context needs it inside the user
+    //   if (!data.error) {
+    //     data.user.authToken = data.authToken;
+    //     console.log(data);
+    //     login(data.user);
+    //     console.log(user);
+    //   } else {
+    //     throw Error(data.message);
+    //   }
+    // } catch (error) {
+    //   console.log(error);
+    //   logout();
+    //   // history.push("/");
+    // }
+    history.push("/track/browse");
   };
 
   return (
