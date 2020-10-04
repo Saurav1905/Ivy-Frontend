@@ -5,6 +5,8 @@ import Browse from "../components/Browse";
 import Mytracks from "../components/Mytracks";
 import NotFound from "./NotFound";
 import UserRoadmap from "../components/UserRoadmap";
+import Help from "../components/Help";
+import AllRoadmap from "../components/AllRoadmap";
 
 function Home() {
   return (
@@ -12,12 +14,12 @@ function Home() {
       <NavBar />
       <div className="Home__content">
         <Switch>
-          {/* <Route path="" component={} /> */}
-
-          <Route path="/track/browse/:id" component={UserRoadmap} />
+          <Route path="/track/mytrack/:id" component={UserRoadmap} />
+          <Route path="/track/browse/:id" component={AllRoadmap} />
+          <Route path="/track/mytracks/help" component={Help} />
           <Route path="/track/mytracks/" component={Mytracks} />
-          <Route path="/not-found" component={NotFound} />
           <Route path="/track/browse" component={Browse} />
+          <Route path="/not-found" component={NotFound} />
           <Redirect to="/not-found" />
         </Switch>
       </div>

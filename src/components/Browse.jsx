@@ -1,5 +1,5 @@
 import React from "react";
-import Roadmap from "./Roadmap";
+import GlobalRoadmap from "./GlobalRoadmap";
 import Search from "./Search";
 
 // STYLES FOR SEARCH BAR IGNORE MAAR KAVII
@@ -12,7 +12,7 @@ function Browse() {
         <Search />
       </div>
       <div className="browse__roadmaps">
-        <Roadmap
+        <GlobalRoadmap
           title="UX"
           description="Follow the path Adel took to become a senior UX designer at Facebook."
           id="1"

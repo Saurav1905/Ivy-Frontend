@@ -495,3 +495,10 @@ body {
 .Mytracks__links .active {
     color: #282B31;
 }
+
+.Home__content {
+    padding: 20vh;
+    padding-top: 10vh;
+    font-size: 16px;
+    font-family: 'Mulish', sans-serif;
+}

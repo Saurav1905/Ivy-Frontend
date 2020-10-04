@@ -5,7 +5,7 @@ import CheckBoxOutlinedIcon from "@material-ui/icons/CheckBoxOutlined";
 import PersonIcon from "@material-ui/icons/Person";
 import HelpIcon from "@material-ui/icons/Help";
 import Roadmap from "./Roadmap";
-function Roadmaps(props) {
+function Roadmaps() {
   return (
     <>
       <div className="browse__top">

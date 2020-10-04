@@ -2,7 +2,7 @@ import { Avatar } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import React from "react";
 
-function Roadmap(props) {
+function GlobalRoadmap(props) {
   return (
     <div className="Roadmap__container">
       <div className="Roadmap__info">
@@ -17,7 +17,7 @@ function Roadmap(props) {
             <p>{props.usertitle}</p>
           </div>
         </div>
-        <Link to={`/track/mytrack/${props.id}`} className="Roadmap__start">
+        <Link to={`/track/browse/${props.id}`} className="Roadmap__start">
           Start
         </Link>
       </div>
@@ -25,4 +25,4 @@ function Roadmap(props) {
   );
 }
 
-export default Roadmap;
+export default GlobalRoadmap;
