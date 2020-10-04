@@ -1,8 +1,10 @@
-import React from "react";
+import React, {useContext} from "react";
 import { Link } from "react-router-dom";
 import CheckIcon from "@material-ui/icons/Check";
 import { Avatar } from "@material-ui/core";
+import AuthContext from "../contexts/auth/AuthContext";
 function Landing() {
+  const {setLoginModalOpen, user, setRegisterModalOpen} = useContext(AuthContext)
   return (
     <>
       <div className="Landing__nav">
@@ -10,12 +12,21 @@ function Landing() {
           {" "}
           Skill<span className="Landing__track">Track</span>
         </span>
-        <Link to="/user" className="Landing__signin">
+        <Link onClick={() => setLoginModalOpen(true)} className="Landing__signin">
           Sign in
         </Link>
-        <Link to="/track/browse" className="Landing__start">
-          Get Started
-        </Link>
+        {user ? (
+            <Link to="/track/browse" className="Landing__start">
+              Get Started
+            </Link>
+          ) :
+          (
+            <Link onClick={() => setRegisterModalOpen(true)} className="Landing__start">
+              Get Started
+            </Link>
+          )
+        }
+        
       </div>
       <div className="Landing__main">
         <div className="Landing__background">
@@ -25,9 +36,17 @@ function Landing() {
               The best online resources to learn anything curated in tracks by
               experts.
             </h6>
-            <Link to="/home" className="Landing__start">
-              Get Started
-            </Link>
+            {user ? (
+                <Link to="/track/browse" className="Landing__start">
+                  Get Started
+                </Link>
+              ) :
+              (
+                <Link onClick={() => setRegisterModalOpen(true)} className="Landing__start">
+                  Get Started
+                </Link>
+              )
+            }
             <div
               style={{ marginTop: 15, display: "flex", position: "relative" }}
             >
