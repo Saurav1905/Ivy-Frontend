@@ -11,7 +11,7 @@ function GlobalRoadmap(props) {
       </div>
       <div className="Roadmap__personal">
         <div className="Roadmap__avatar">
-          <Avatar />
+          <Avatar src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200" />
           <div className="Roadmap__avatartext">
             <h1>{props.username}</h1>
             <p>{props.usertitle}</p>

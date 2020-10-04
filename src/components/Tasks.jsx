@@ -8,7 +8,7 @@ function Tasks(props) {
         <h2>UX Design Track</h2>
         <div className="Task__avatar">
           <h4>Created By adel Khan</h4>
-          <Avatar src="https://picsum.photos/200?random=1" />
+          <Avatar src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200" />
         </div>
       </div>
       <Swipper id={props.id} />

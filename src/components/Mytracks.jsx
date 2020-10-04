@@ -3,7 +3,7 @@ import MytracksTop from "./MytracksTop";
 import GlobalRoadmap from "./GlobalRoadmap";
 import Form from "./Form";
 function Roadmaps() {
-  const [filter, setFilter] = useState("General");
+  const [filter, setFilter] = useState("UX Design");
   const [mytrack, useMytrack] = useState([
     {
       title: "Data Science Track",
