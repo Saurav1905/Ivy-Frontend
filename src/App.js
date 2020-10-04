@@ -9,8 +9,8 @@ function App() {
     <>
       <Switch>
         <Route path="/user" component={User} />
-        <Route path="/home" component={Home} />
-        <Route path="/" component={Landing} />
+        <Route path="/track" component={Home} />
+        <Route exact path="/" component={Landing} />
       </Switch>
     </>
   );

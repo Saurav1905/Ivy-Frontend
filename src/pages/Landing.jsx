@@ -13,7 +13,7 @@ function Landing() {
         <Link to="/user" className="Landing__signin">
           Sign in
         </Link>
-        <Link to="/home" className="Landing__start">
+        <Link to="/track/browse" className="Landing__start">
           Get Started
         </Link>
       </div>
