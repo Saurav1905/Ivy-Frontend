@@ -496,7 +496,7 @@ body {
 }
 
 .Task__bg {
-  height: 80vh;
+  min-height: 80vh;
   width: 69.25133689839572vw;
   background-color: #ffae70;
   border-radius: 20px;

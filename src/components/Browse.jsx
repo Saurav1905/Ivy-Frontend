@@ -1,7 +1,7 @@
 import React from "react";
 import GlobalRoadmap from "./GlobalRoadmap";
 import Search from "./Search";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Form from "./Form";
 
 function Browse() {
