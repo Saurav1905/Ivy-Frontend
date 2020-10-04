@@ -3,6 +3,7 @@ import MytracksTop from "./MytracksTop";
 import GlobalRoadmap from "./GlobalRoadmap";
 import Form from "./Form";
 function Roadmaps() {
+  const [filter, setFilter] = useState("General")
   const [mytrack, useMytrack] = useState([
     {
       title: "Data Science Track",
@@ -10,7 +11,8 @@ function Roadmaps() {
         "Follow the path Adel took to become a senior UX designer at Facebook.",
       id: 1,
       username: "Adel Khan",
-      usertitle: "UX Designer, Facebook",
+      usertitle: "Data Scientist, Palantir",
+      category: "General"
     },
     {
       title: "UX",
@@ -18,7 +20,17 @@ function Roadmaps() {
         "Follow the resources Rohini used to land a job as a Data Scientist at Palantir",
       id: 2,
       username: "Rohini Sharma",
-      usertitle: "Data Scientist, Palantir",
+      usertitle: "UX Designer, Facebook",
+      category: "UX Design"
+    },
+    {
+      title: "Frontend Track",
+      description:
+        "Follow the resources Anshuman used to land a job as a Frontend Engineer",
+      id: 2,
+      username: "Anshuman Das",
+      usertitle: "Frontend Dev, Uber",
+      category: "Frontend"
     },
   ]);
   return (
@@ -31,16 +43,19 @@ function Roadmaps() {
         }}
       >
         <div className="browse__roadmaps">
-          {mytrack.map((object) => (
-            <GlobalRoadmap
-              title={object.title}
-              description={object.description}
-              id={object.id}
-              username={object.username}
-              usertitle={object.usertitle}
-              key={object.id}
-            />
-          ))}
+          {mytrack.map((object) => {
+            if(object.category === filter)
+              return (
+              <GlobalRoadmap
+                title={object.title}
+                description={object.description}
+                id={object.id}
+                username={object.username}
+                usertitle={object.usertitle}
+                key={object.id}
+              />
+              )
+          })}
         </div>
         <div
           style={{
@@ -49,7 +64,7 @@ function Roadmaps() {
           }}
           className="browse__selection"
         >
-          <Form />
+          <Form value={filter} setValue={setFilter}/>
         </div>
       </div>
     </>
