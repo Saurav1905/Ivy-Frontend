@@ -1,7 +1,7 @@
 import { Avatar } from "@material-ui/core";
 import React from "react";
 import Swipper from "./Swipper";
-function Tasks() {
+function Tasks(props) {
   return (
     <div className="Task__bg">
       <div className="Task__heading">
@@ -11,7 +11,7 @@ function Tasks() {
           <Avatar src="https://picsum.photos/200?random=1" />
         </div>
       </div>
-      <Swipper />
+      <Swipper id={props.id} />
     </div>
   );
 }

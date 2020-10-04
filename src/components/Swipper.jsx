@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.scss";
-function Swipper() {
+function Swipper(props) {
   return (
     <div className="Task__task">
       <Swiper
@@ -13,7 +14,19 @@ function Swipper() {
       >
         <SwiperSlide className="Slide">slide</SwiperSlide>
         <SwiperSlide className="Slide">slide</SwiperSlide>
-        <SwiperSlide className="Slide">slide</SwiperSlide>
+        <SwiperSlide className="Slide">
+          <Link
+            to={`/track/mytrack/create/${props.id}`}
+            style={{
+              fontSize: 30,
+              cursor: "pointer",
+              textDecoration: "none",
+              color: "black",
+            }}
+          >
+            +
+          </Link>
+        </SwiperSlide>
       </Swiper>
     </div>
   );
