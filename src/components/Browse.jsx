@@ -2,6 +2,7 @@ import React from "react";
 import GlobalRoadmap from "./GlobalRoadmap";
 import Search from "./Search";
 import { useState } from "react";
+import Form from "./Form";
 
 function Browse() {
   const [global, useGlobal] = useState([
@@ -28,17 +29,33 @@ function Browse() {
         <h1>Select Skilltracks you’d like to follow!</h1>
         <Search />
       </div>
-      <div className="browse__roadmaps">
-        {global.map((object) => (
-          <GlobalRoadmap
-            title={object.title}
-            description={object.description}
-            id={object.id}
-            username={object.username}
-            usertitle={object.usertitle}
-            key={object.id}
-          />
-        ))}
+      <div
+        className="browse__wrapper"
+        style={{
+          display: "flex",
+        }}
+      >
+        <div className="browse__roadmaps">
+          {global.map((object) => (
+            <GlobalRoadmap
+              title={object.title}
+              description={object.description}
+              id={object.id}
+              username={object.username}
+              usertitle={object.usertitle}
+              key={object.id}
+            />
+          ))}
+        </div>
+        <div
+          style={{
+            paddingTop: "12vh",
+            marginLeft: "2vw",
+          }}
+          className="browse__selection"
+        >
+          <Form />
+        </div>
       </div>
     </>
   );
