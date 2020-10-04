@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import ReactModal from "react-modal";
 import AuthContext from "../contexts/auth/AuthContext";
-import useHistory from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const RegisterModal = () => {
   const {
