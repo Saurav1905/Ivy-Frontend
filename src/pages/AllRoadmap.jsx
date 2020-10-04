@@ -6,7 +6,7 @@ function AllRoadmap(props) {
   return (
     <>
       <MytracksTop />
-      <Tasks />
+      <Tasks id={props.match.params.id} />
     </>
   );
 }
