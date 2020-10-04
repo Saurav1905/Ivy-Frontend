@@ -3,7 +3,7 @@ import MytracksTop from "./MytracksTop";
 import GlobalRoadmap from "./GlobalRoadmap";
 import Form from "./Form";
 function Roadmaps() {
-  const [filter, setFilter] = useState("General")
+  const [filter, setFilter] = useState("General");
   const [mytrack, useMytrack] = useState([
     {
       title: "Data Science Track",
@@ -12,7 +12,7 @@ function Roadmaps() {
       id: 1,
       username: "Adel Khan",
       usertitle: "Data Scientist, Palantir",
-      category: "General"
+      category: "General",
     },
     {
       title: "UX",
@@ -21,16 +21,16 @@ function Roadmaps() {
       id: 2,
       username: "Rohini Sharma",
       usertitle: "UX Designer, Facebook",
-      category: "UX Design"
+      category: "UX Design",
     },
     {
       title: "Frontend Track",
       description:
         "Follow the resources Anshuman used to land a job as a Frontend Engineer",
-      id: 2,
+      id: 3,
       username: "Anshuman Das",
       usertitle: "Frontend Dev, Uber",
-      category: "Frontend"
+      category: "Frontend",
     },
   ]);
   return (
@@ -44,17 +44,17 @@ function Roadmaps() {
       >
         <div className="browse__roadmaps">
           {mytrack.map((object) => {
-            if(object.category === filter)
+            if (object.category === filter)
               return (
-              <GlobalRoadmap
-                title={object.title}
-                description={object.description}
-                id={object.id}
-                username={object.username}
-                usertitle={object.usertitle}
-                key={object.id}
-              />
-              )
+                <GlobalRoadmap
+                  title={object.title}
+                  description={object.description}
+                  id={object.id}
+                  username={object.username}
+                  usertitle={object.usertitle}
+                  key={object.id}
+                />
+              );
           })}
         </div>
         <div
@@ -64,7 +64,7 @@ function Roadmaps() {
           }}
           className="browse__selection"
         >
-          <Form value={filter} setValue={setFilter}/>
+          <Form value={filter} setValue={setFilter} />
         </div>
       </div>
     </>

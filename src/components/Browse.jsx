@@ -24,6 +24,15 @@ function Browse() {
       username: "Rohini Sharma",
       usertitle: "Data Scientist, Palantir",
     },
+    {
+      title: "Frontend Track",
+      description:
+        "Follow the resources Anshuman used to land a job as a Frontend Engineer",
+      id: 3,
+      username: "Anshuman Das",
+      usertitle: "Frontend Dev, Uber",
+      category: "Frontend",
+    },
   ]);
   const [filter, setFilter] = useState("General");
 
@@ -48,10 +57,10 @@ function Browse() {
                   <GlobalRoadmap
                     title={object.title}
                     description={object.description}
-                    id={object._id}
+                    id={object.id}
                     username={object.username}
                     usertitle={object.category}
-                    key={object._id}
+                    key={object.id}
                   />
                 );
             })}
