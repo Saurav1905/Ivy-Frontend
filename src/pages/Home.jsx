@@ -4,9 +4,9 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import Browse from "../components/Browse";
 import Mytracks from "../components/Mytracks";
 import NotFound from "./NotFound";
-import UserRoadmap from "../components/UserRoadmap";
 import Help from "../components/Help";
-import AllRoadmap from "../components/AllRoadmap";
+import UserRoadmap from "./UserRoadmap";
+import AllRoadmap from "./AllRoadmap";
 
 function Home() {
   return (

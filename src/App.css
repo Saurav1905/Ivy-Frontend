@@ -1,504 +1,551 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-
-
+  box-sizing: border-box;
+  margin: 0;
 }
 
 body {
-    min-height: 100vh;
-    color: #001A49;
-
+  min-height: 100vh;
+  color: #001a49;
 }
 
 /* nav */
 .Landing__nav {
-    width: 100%;
-    height: 100px;
-    display: flex;
-    padding-left: 21.16182572614108vh;
-    padding-right: 31.3969571230982vh;
-    align-items: center;
-    justify-content: space-between;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  padding-left: 21.16182572614108vh;
+  padding-right: 31.3969571230982vh;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .Landing__logo {
-    font-weight: 900;
-    flex: 1;
-    font-family: 'Poppins', sans-serif;
-    font-size: 24px;
+  font-weight: 900;
+  flex: 1;
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
 }
 
 .Landing__track {
-    color: #FFAE71;
+  color: #ffae71;
 }
 
 .Landing__start {
-    width: 147px;
-    height: 50px;
-    background-color: #FFAE71;
-    color: white;
-    text-decoration: none;
-    border-radius: 33px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Mulish', sans-serif;
+  width: 147px;
+  height: 50px;
+  background-color: #ffae71;
+  color: white;
+  text-decoration: none;
+  border-radius: 33px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Mulish", sans-serif;
 }
 
 .Landing__signin {
-    text-decoration: none;
-    font-family: 'Mulish', sans-serif;
-    margin-right: 51px;
-    color: #001A49;
-    ;
+  text-decoration: none;
+  font-family: "Mulish", sans-serif;
+  margin-right: 51px;
+  color: #001a49;
 }
 
 /* Content */
 .Landing__main {
-    height: 96.81881051175657vh;
-    width: 100%;
+  height: 96.81881051175657vh;
+  width: 100%;
 }
 
 .Landing__background {
-    height: 96.81881051175657vh;
-    width: 72.86096256684492vw;
-    background: linear-gradient(44.11deg, rgba(205, 16, 255, 0.05), rgba(159, 6, 255, 0.05));
-    mix-blend-mode: normal;
-    border-radius: 0px 20px 20px 0px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+  height: 96.81881051175657vh;
+  width: 72.86096256684492vw;
+  background: linear-gradient(
+    44.11deg,
+    rgba(205, 16, 255, 0.05),
+    rgba(159, 6, 255, 0.05)
+  );
+  mix-blend-mode: normal;
+  border-radius: 0px 20px 20px 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .Landing__content {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    text-align: left;
-    padding-left: 10.695187165775401vw;
-    line-height: 3rem;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+  padding-left: 10.695187165775401vw;
+  line-height: 3rem;
 }
 
 .Landing__content h1 {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    font-size: 60px;
-    line-height: 68px;
-    width: 40.7vw;
-
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 68px;
+  width: 40.7vw;
 }
 
 .Landing__content h6 {
-    font-family: "Mulish", sans-serif;
-    font-weight: 400;
-    color: #4F596A;
-    font-size: 20px;
-    line-height: 30px;
-    width: 40.7vw;
-    margin-bottom: 20px;
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+  color: #4f596a;
+  font-size: 20px;
+  line-height: 30px;
+  width: 40.7vw;
+  margin-bottom: 20px;
 }
 
 .Landing__box {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    width: 222px;
-    height: 96.81881051175657vh;
-    right: -6.4171122994652405vw;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 222px;
+  height: 96.81881051175657vh;
+  right: -6.4171122994652405vw;
 }
 
 .Landing__decor {
-    height: 135px;
-    width: 222px;
-    background: #FFAE71;
-    box-shadow: 0px 32px 44px #818A8C;
-    border-radius: 20px;
-    position: relative;
-    width: 222px;
-    border: 5px solid #FFAE71;
+  height: 135px;
+  width: 222px;
+  background: #ffae71;
+  box-shadow: 0px 32px 44px #818a8c;
+  border-radius: 20px;
+  position: relative;
+  width: 222px;
+  border: 5px solid #ffae71;
 }
 
 .Landing__innerdecor {
-    background-color: transparent;
-    box-shadow: none;
+  background-color: transparent;
+  box-shadow: none;
 }
 
 .Landing__tick {
-    color: black;
-    background-color: rgba(242, 242, 242, 0.48);
-    margin-left: 10px;
-    margin-top: 98px;
-    border-radius: 999px;
+  color: black;
+  background-color: rgba(242, 242, 242, 0.48);
+  margin-left: 10px;
+  margin-top: 98px;
+  border-radius: 999px;
 }
 
 .Landing__ticktrans {
-    color: transparent;
-    border: 2px solid #FFAE71;
+  color: transparent;
+  border: 2px solid #ffae71;
 }
 
 .Landing__counter {
-    margin-top: 14vh;
-    height: 23.78vh;
-    width: 74.86vw;
-    border: 1px solid #E7EAEB;
-    border-radius: 21px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    align-items: center;
-    position: relative;
+  margin-top: 14vh;
+  height: 23.78vh;
+  width: 74.86vw;
+  border: 1px solid #e7eaeb;
+  border-radius: 21px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
 .Landing__count {
-    width: calc(100%/3);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    text-align: left;
-    border-right: 1px solid #E7EAEB;
+  width: calc(100% / 3);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+  border-right: 1px solid #e7eaeb;
 }
 
 .Landing__countthird {
-    border: none;
+  border: none;
 }
 
 .Landing__count h1,
 .Landing__count p {
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .Landing__patch {
-    height: 86px;
-    width: 86px;
-    background: linear-gradient(35.71deg, #FFD7A9 9.11%, #FFAE70 71.64%);
-    border-radius: 1000px;
-    position: absolute;
-    bottom: -12.894882434301522vh;
-    left: -5.748663101604278vw;
+  height: 86px;
+  width: 86px;
+  background: linear-gradient(35.71deg, #ffd7a9 9.11%, #ffae70 71.64%);
+  border-radius: 1000px;
+  position: absolute;
+  bottom: -12.894882434301522vh;
+  left: -5.748663101604278vw;
 }
 
 .Landing__features {
-    margin-top: 15.076071922544951vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+  margin-top: 15.076071922544951vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .Landing__features h1 {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    color: #001A49;
-    font-size: 46px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: #001a49;
+  font-size: 46px;
 }
 
 .Landing__features p {
-    margin-top: 10px;
-    width: 48.663101604278076vw;
-    text-align: center;
-    font-style: 20px;
-    line-height: 30px;
+  margin-top: 10px;
+  width: 48.663101604278076vw;
+  text-align: center;
+  font-style: 20px;
+  line-height: 30px;
 }
 
 .Landing__patchright {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    height: 52.83540802213001vh;
-    width: calc(52.83540802213001vh/2);
-    border-radius: 1050px 0 0 1050px;
-    background: linear-gradient(35.71deg, #FFD7A9 9.11%, #FFAE70 71.64%);
-    right: calc(-52.83540802213001vh/4);
-    top: calc(52.83540802213001vh/3.5);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  height: 52.83540802213001vh;
+  width: calc(52.83540802213001vh / 2);
+  border-radius: 1050px 0 0 1050px;
+  background: linear-gradient(35.71deg, #ffd7a9 9.11%, #ffae70 71.64%);
+  right: calc(-52.83540802213001vh / 4);
+  top: calc(52.83540802213001vh / 3.5);
 }
 
 .Landing__create {
-    height: 63.34716459197787vh;
-    margin-left: 10.294117647058824vw;
-    display: flex;
-    align-items: center;
+  height: 63.34716459197787vh;
+  margin-left: 10.294117647058824vw;
+  display: flex;
+  align-items: center;
 }
 
 .Landing__createtext {
-    width: 37.4331550802139vw;
+  width: 37.4331550802139vw;
 }
 
 .Landing__createtext h1 {
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 46px;
-    line-height: 56px;
-    color: #001A49;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 56px;
+  color: #001a49;
 }
 
 .Landing__createtext p {
-    margin-top: 2.7662517289073305vh;
-    font-family: Mulish;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 30px;
-    color: #4F596A;
+  margin-top: 2.7662517289073305vh;
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+  color: #4f596a;
 }
 
 .Landing__Man {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    object-fit: contain;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-image: url("./ToyFaces.png");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  object-fit: contain;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-image: url("./ToyFaces.png");
 }
-
-
 
 .Landing__howitworks {
-    background: #FFB980;
-    min-height: auto;
-    padding: 9.95850622406639vh 10.294117647058824vw;
-    color: white;
+  background: #ffb980;
+  min-height: auto;
+  padding: 9.95850622406639vh 10.294117647058824vw;
+  color: white;
 }
 
-.Landing__howitworks>h1 {
-
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 46px;
-    line-height: 56px;
-    color: #FFFFFF;
+.Landing__howitworks > h1 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 56px;
+  color: #ffffff;
 }
 
 .Landing__bullet {
-    position: relative;
-    margin-top: 3em;
-    margin-left: 3em;
+  position: relative;
+  margin-top: 3em;
+  margin-left: 3em;
 }
 
 .Landing__bulletcircle {
-    position: absolute;
-    border-radius: 1000px;
-    background: linear-gradient(35.71deg, #FFD7A9 9.11%, #FFFFFF 71.64%);
-    height: 50px;
-    width: 50px;
-    left: -50px
+  position: absolute;
+  border-radius: 1000px;
+  background: linear-gradient(35.71deg, #ffd7a9 9.11%, #ffffff 71.64%);
+  height: 50px;
+  width: 50px;
+  left: -50px;
 }
 
-.Landing__bullet>h1 {
-    padding-left: 3em;
-    font-family: "Poppins"sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 30;
-    line-height: 36px;
-    color: #FFFFFF;
+.Landing__bullet > h1 {
+  padding-left: 3em;
+  font-family: "Poppins" sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30;
+  line-height: 36px;
+  color: #ffffff;
 }
 
 .Landing__bottom {
-    min-height: 40vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: column;
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
 }
 
 .Landing__bottom h1 {
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: bold;
-    text-align: center;
-    font-size: 30px;
-    color: #001A49;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+  font-size: 30px;
+  color: #001a49;
 }
 
 /* Appbar */
 .NavBar__appbar {
-    background: white;
-    padding-left: 10.227272727272727vw;
-    border-bottom: 2px solid #E0E0EC;
-    height: 78px;
-    display: flex;
-    align-items: center;
-    padding-right: 10.227272727272727vw;
+  background: white;
+  padding-left: 10.227272727272727vw;
+  border-bottom: 2px solid #e0e0ec;
+  height: 78px;
+  display: flex;
+  align-items: center;
+  padding-right: 10.227272727272727vw;
 }
 
 .NavBar__appbar a {
-    text-decoration: none;
-    font-family: "Montserrat", sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 50px;
-    color: #001A49;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 50px;
+  color: #001a49;
 }
 
-
 .NavBar__appbar .active {
-    border-bottom: 4px solid #FFAE70 !important;
+  border-bottom: 4px solid #ffae70 !important;
 }
 
 .NavBar__spacing {
-    flex: 1
+  flex: 1;
 }
 
 .Home__content {
-    min-height: calc(100vh - 78px);
-    background: linear-gradient(44.11deg, rgba(205, 16, 255, 0.05), rgba(159, 6, 255, 0.05));
-    mix-blend-mode: normal;
-    border-radius: 0px 20px 20px 0px;
+  min-height: calc(100vh - 78px);
+  background: linear-gradient(
+    44.11deg,
+    rgba(205, 16, 255, 0.05),
+    rgba(159, 6, 255, 0.05)
+  );
+  mix-blend-mode: normal;
+  border-radius: 0px 20px 20px 0px;
 }
 
 /* Browse */
 
 .browse__top {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-
-
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .browse__top h1 {
-    font-family: "Mulish", sans-serif;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 24px;
-    margin-top: 8.71369294605809vh;
-    color: #4F596A;
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 24px;
+  margin-top: 8.71369294605809vh;
+  color: #4f596a;
 }
 
 .browse__roadmaps {
-    width: 834px;
-    padding-left: 12.8vw;
-    padding-top: 12vh;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-around;
-    flex-direction: column;
+  width: 834px;
+  padding-left: 12.8vw;
+  padding-top: 12vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-direction: column;
 }
 
 .Roadmap__container {
-    margin-bottom: 36px;
-    padding: 29.33px;
-    height: 172px;
-    width: 843px;
-    background: linear-gradient(44.11deg, rgba(205, 16, 255, 0.05), rgba(159, 6, 255, 0.05));
-    mix-blend-mode: normal;
-    border-radius: 21px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  margin-bottom: 36px;
+  padding: 29.33px;
+  height: 172px;
+  width: 843px;
+  background: linear-gradient(
+    44.11deg,
+    rgba(205, 16, 255, 0.05),
+    rgba(159, 6, 255, 0.05)
+  );
+  mix-blend-mode: normal;
+  border-radius: 21px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .Roadmap__info h1 {
-    font-family: "Montserrat";
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 24px;
-    color: #001A49;
-    width: 248px;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  color: #001a49;
+  width: 248px;
 }
 
 .Roadmap__info p {
-    width: 248px;
-    font-family: "Mulish";
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: #4F596A;
-    margin-top: 10px;
+  width: 248px;
+  font-family: "Mulish";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #4f596a;
+  margin-top: 10px;
 }
 
 .Roadmap__avatartext h1 {
-    font-family: "Mulish";
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    color: #4F596A;
+  font-family: "Mulish";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #4f596a;
 }
 
 .Roadmap__avatartext {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 .Roadmap__personal {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .Roadmap__avatar {
-    display: flex;
+  display: flex;
 }
 
 .Roadmap__avatartext p {
-
-    font-family: "Mulish";
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 24px;
-    color: #4F596A;
+  font-family: "Mulish";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
+  color: #4f596a;
 }
 
 .Roadmap__start {
-    width: 204.76px;
-    height: 52px;
-    background-color: #FFAE71;
-    color: white !important;
-    text-decoration: none !important;
-    border-radius: 33px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Mulish', sans-serif;
+  width: 204.76px;
+  height: 52px;
+  background-color: #ffae71;
+  color: white !important;
+  text-decoration: none !important;
+  border-radius: 33px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Mulish", sans-serif;
 }
 
 .Mytracks__links {
-    display: flex;
-    margin-top: 8.71369294605809vh;
+  display: flex;
+  margin-top: 8.71369294605809vh;
 }
 
 .Mytracks__completed {
-    text-decoration: none;
-    color: black;
-    display: flex;
-    align-items: center;
-    font-weight: 400;
-    font-size: 20px;
-    margin-left: 3vw;
-    line-height: 20px;
-    align-items: center;
-    color: #A6ADB1;
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 20px;
+  margin-left: 3vw;
+  line-height: 20px;
+  align-items: center;
+  color: #a6adb1;
 }
 
 .Mytracks__links .active {
-    color: #282B31;
+  color: #282b31;
 }
 
 .Home__content {
-    padding: 20vh;
-    padding-top: 10vh;
-    font-size: 16px;
-    font-family: 'Mulish', sans-serif;
+  padding: 20vh;
+  padding-top: 10vh;
+  font-size: 16px;
+  font-family: "Mulish", sans-serif;
+}
+.Task__bg {
+  height: 90.59474412171508vh;
+  width: 69.25133689839572vw;
+  background-color: #ffae70;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: start;
+  padding: 5%;
+}
+.Task__task {
+  min-height: 100%;
+  min-width: 100%;
+  margin-top: 10vh;
+}
+.Slide {
+  min-height: 315px;
+  min-width: 241px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #f2f2f2;
+  border-radius: 20px;
+  align-items: center;
+}
+.Task__bg h2 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 45px;
+
+  color: #000000;
+}
+.Task__bg h4 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  margin-right: 30px;
+  color: #000000;
+}
+.Task__avatar {
+  display: flex;
+  align-items: center;
 }
