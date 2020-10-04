@@ -20,7 +20,7 @@ function NavBar() {
           Browse
         </NavLink>
         <NavLink
-          to="/track/mytracks"
+          to="/track/mytracks/completed"
           style={{ marginLeft: 72 }}
           className="NavBar__tracklink"
         >
